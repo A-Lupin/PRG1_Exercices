@@ -1,4 +1,4 @@
-# Identificateurs (noms des variables) en c++
+# Identificateurs en c++
 Pour chacun des cas ci-dessous, indiquez s'il s'agit d'un identificateur C++ légal ou non. Justifiez votre réponse si celle-ci est "Non"
 
 |  #  | Identificateur | Oui / Non | Explication | 
