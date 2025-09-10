@@ -15,7 +15,7 @@ Pour chacun des cas ci-dessous, indiquez s'il s'agit d'un identificateur C++ lé
 | 10 | `bond-007` | | |
 | 11 | `tom&jerry` | | |
 | 12 | `int` | | |
-| 13 | `INT` | | |
+| 13 | `Int` | | |
 | 14 | `André` | | |
 | 15 | `_` | | |
 
@@ -38,7 +38,7 @@ Pour chacun des cas ci-dessous, indiquez s'il s'agit d'un identificateur C++ lé
 |10 | `bond-007` | Non | Le caractère '-' n'est pas autorisé |
 |11 | `tom&jerry` | Non | Le caractère '&' n'est pas autorisé |
 |12 | `int` | Non | Mot réservé |
-|13 | `INT` | Oui | Déconseillé toutefois ! |
+|13 | `Int` | Oui | Déconseillé, sauf pour de bonnes raisons ! |
 |14 | `André` | Non | Les lettres accentuées ne sont pas autorisées |
 |15 | `_` | Oui | … mais pas des plus parlants (à n'utiliser que si la syntaxe nous force à donner un nom d'identificateur qui n'a pas d'autre utilité) |
 
