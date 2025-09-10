@@ -1,7 +1,7 @@
-# Erreur de syntaxe
-Le programme ci-dessous contient plusieurs erreurs de syntaxe.
+# Erreurs dans un programme
+Le programme ci-dessous contient plusieurs erreurs.
 
-Corriger ce code afin qu'il passe la compilation.
+Corriger ce code afin qu'il passe à la compilation.
 
 ~~~cpp
 /* programme avec erreurs
@@ -35,12 +35,12 @@ int main() {
 1. manque un # => **#include** ...
 1. use spacename => us**ing** **name**space
 1. Main => main
-1. manque une "}" ouvrante
+1. manque une "{" ouvrante
 1. out => **c**out
-1. 'Hello' => "Hello" ( *serait ok pour un caractère : 'a'* )
+1. 'Hello' => "Hello" ( *serait ok pour un  seul caractère : 'a'* )
 1. Return => **r**eturn + valeur
 1. end n'est pas une instruction
 1. manque une "}" fermante
 
-*Sans doute écrit trop top le matin ;)*
+*Sans doute écrit trop tôt le matin ;)*
 </details>
