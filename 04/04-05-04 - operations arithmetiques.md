@@ -1,0 +1,74 @@
+# Fonction *Opérations arithmétiques*
+Écrire une fonction qui reçoit en paramètres d'entrée 2 nombres réels (de type double) et un caractère, et qui fournit en paramètre de sortie le résultat correspondant à l'une des 4 opérations appliquées à ses 2 premiers paramètres, en fonction de la valeur du troisième paramètre, à savoir : addition pour le caractère '+', soustraction pour '-', multiplication pour '*' et division pour '/'. Si l'un de ces 4 caractères est passé en argument, la fonction doit renvoyer true comme valeur (statut) de retour; dans le cas contraire, elle doit renvoyer false. Ne pas tenir compte des risques de division par zéro.
+
+Écrire aussi un petit programme (main) utilisant cette fonction pour effectuer les 4 opérations sur les 2 nombres fournis en entrée par l'utilisateur. Ne pas tenir compte des éventuelles erreurs de saisie utilisateur.
+<details>
+<summary>Solution</summary>
+
+~~~cpp
+#include <iostream>
+
+using namespace std;
+
+//------------------------------------------------------------
+bool operation(double operande_gauche,
+               double operande_droit,
+               char operateur,
+               double& resultat);
+               
+void test(double operande_gauche,
+          double operande_droit,
+          char operateur);
+
+//------------------------------------------------------------
+int main() {
+   double operande_gauche, operande_droit;
+   cout << "Donnez 2 nombres reels : ";
+   cin >> operande_gauche >> operande_droit; // saisie non contrôlée ici
+   test(operande_gauche, operande_droit, '+');
+   test(operande_gauche, operande_droit, '-');
+   test(operande_gauche, operande_droit, '*');
+   test(operande_gauche, operande_droit, '/');
+   test(operande_gauche, operande_droit, '?');
+}
+
+//------------------------------------------------------------
+bool operation(double operande_gauche,
+               double operande_droit,
+               char operateur,
+               double& resultat) {
+   
+   switch (operateur) {
+      case '+': resultat = operande_gauche + operande_droit; break;
+      case '-': resultat = operande_gauche - operande_droit; break;
+      case '*': resultat = operande_gauche * operande_droit; break;
+      case '/': resultat = operande_gauche / operande_droit; break; 
+      default : return false;
+   }
+  return true;
+}
+
+//------------------------------------------------------------
+void test(double operande_gauche,
+          double operande_droit,
+          char operateur) {
+   double resultat;
+   if (operation(operande_gauche, operande_droit, operateur, resultat)) {
+      cout << operande_gauche << " " << operateur << " "
+           << operande_droit << " = " << resultat << endl;
+   }
+
+   else {
+      cout << "L'opération " << "'" << operateur << "'" << " est illicite" << endl;
+   }
+}
+
+// Donnez 2 nombres reels : 3 5
+// 3 + 5 = 8
+// 3 - 5 = -2
+// 3 * 5 = 15
+// 3 / 5 = 0.6
+// L'opération '?' est illicite
+~~~
+
+</details>
