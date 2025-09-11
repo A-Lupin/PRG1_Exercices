@@ -12,7 +12,7 @@ $$F_n = F_{n-1} + F_{n-2} \text{ avec } F_0 = 0 \text{ et }  F_1 = 1$$
 
 [Wikipedia - Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_sequence)
 
-**NB** Le nombre d'appels récursifs croît exponentiellement avec *n ; ce n'est donc pas une manière recommandable de programmer cette fonction
+**NB** Le nombre d'appels récursifs croît exponentiellement avec *n* ; ce n'est donc pas une manière recommandable de programmer cette fonction
 
 <details>
 <summary>Solution</summary>
@@ -30,3 +30,4 @@ int fibo(int n) {
 ~~~
 
 </details>
+
