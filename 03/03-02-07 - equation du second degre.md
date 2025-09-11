@@ -1,4 +1,4 @@
-# `a*x^2+b*x+c=0`
+# $$a x^2+b x+c=0$$
 
 Compléter le programme suivant qui demande à l'utilisateur les paramètres a, b et c d'une 
 équation du second degré pour qu'il en affiche toutes les solutions réelles s'il y en a.
