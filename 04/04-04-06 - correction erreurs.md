@@ -31,7 +31,6 @@ void h(int i; char c) {
 <summary>Solution</summary>
 
 ~~~cpp
-#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -67,3 +66,4 @@ int main() {
 }
 ~~~
 </details>
+
