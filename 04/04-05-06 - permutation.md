@@ -1,6 +1,6 @@
 # Permutation circulaire droite de 3 réels
 
-Reprendre l'exercice [04-05-02 - permutation](../04%20-%20Fonctions/04-05-02%20-%20permutation.md) mais sans utiliser de référence `double& ref`
+Reprendre l'exercice [04-05-02 - permutation](./04-05-02%20-%20permutation.md) mais sans utiliser de référence `double& ref`
 
 <details>
 <summary>Solution</summary>
@@ -45,3 +45,4 @@ void afficher(double x, double y, double z) {
 }
 ~~~
 </details>
+
