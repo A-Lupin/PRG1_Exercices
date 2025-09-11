@@ -1,6 +1,6 @@
 # Fonctions-opérateurs
 
-Une fraction est implémentée par une structure comportant deux entiers représentant les numérateurs et dénominateurs:
+Une fraction est implémentée par une structure comportant deux entiers représentant numérateur et dénominateur:
 
 ~~~cpp
 
