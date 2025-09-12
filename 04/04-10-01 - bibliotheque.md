@@ -32,15 +32,20 @@ votre saisie : 9
 <summary>Solution</summary>
 
 ~~~cpp
+
+// Programme principal
 #include "annexe.hpp"
 
 int main() {
    int i = saisir("votre saisie", 0, 10);
    afficher("votre saisie", i);
 }
+
 ~~~
 
 ~~~cpp
+
+// annexe.hpp
 #ifndef ANNEXE_HPP
 #define ANNEXE_HPP
 
@@ -53,9 +58,12 @@ void afficher(const std::string& msg,
               int valeur);
 
 #endif //ANNEXE_HPP
+
 ~~~
 
 ~~~cpp
+
+// annexe.cpp 
 #include "annexe.hpp"
 #include <iostream>
 
@@ -75,6 +83,7 @@ void afficher(const std::string& msg,
               int valeur) {
    std::cout << msg << " : " << valeur;
 }
+
 ~~~
 
 </details>
