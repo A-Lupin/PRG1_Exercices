@@ -14,9 +14,11 @@ struct Fraction{int num, den;};
 
 int main() {
   Fraction a{1,2}, b{2,4}, c{-4,12}, d{-5,-10}, e{3,-9};
-  cout << (a == b) << (a < b) << (a <= b) << (c > a) << (c >= e) << (a != d) << endl;
-  //imprime 101010
+  cout  << (a < b) << (a <= b) << (c > a) << (c >= e) 
+        << (a == b) << (a != d) 
+        << endl;
 }
+// Affiche 010110
 
 ~~~
 
@@ -30,20 +32,25 @@ int main() {
 
 struct Fraction{int num, den;};
 
-int compare(const Fraction & gauche, const Fraction & droit) {
+int operator<=>(const Fraction & gauche, const Fraction & droit) {
   return gauche.num * droit.den - droit.num * gauche.den;
 }
 
 bool operator==(const Fraction & gauche, const Fraction & droit) {
-  return compare(gauche, droit) == 0;
+  return gauche <=> droit == 0;
+}
+
+/* Une fois l'opérateur <=> défini, le compilateur ajoute automatiquement
+   les opérateurs <, >, <= et >= ; si l'opérateur == est défini, 
+   on a automatiquement != ; en effet ces opérateurs peuvent être obtenus 
+   de façon canonique de la manière suivante:
+   
+bool operator<(const Fraction & gauche, const Fraction & droit) {
+  return gauche <=> droit < 0;
 }
 
 bool operator!=(const Fraction & gauche, const Fraction & droit) {
-  return not (gauche == droit); // ou compare(gauche, droit) != 0;
-}
-
-bool operator<(const Fraction & gauche, const Fraction & droit) {
-  return compare(gauche, droit) < 0;
+  return not (gauche == droit); 
 }
 
 bool operator>=(const Fraction & gauche, const Fraction & droit) {
@@ -56,12 +63,16 @@ bool operator>(const Fraction & gauche, const Fraction & droit) {
 bool operator<=(const Fraction & gauche, const Fraction & droit) {
   return not (gauche > droit); 
 }
+*/
 
 using namespace std;
 int main() {
   Fraction a{1,2}, b{2,4}, c{-4,12}, d{-5,-10}, e{3,-9};
-  cout << (a == b) << (a < b) << (a <= b) << (c > a) << (c >= e) << (a != d) << endl;
+  cout  << (a < b) << (a <= b) << (c > a) << (c >= e) 
+        << (a == b) << (a != d) 
+        << endl;
 }
+// Affiche 010110
 
 ~~~
 
