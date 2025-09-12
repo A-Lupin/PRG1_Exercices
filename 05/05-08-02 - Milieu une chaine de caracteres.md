@@ -1,6 +1,6 @@
 # Milieu d'une chaîne de caractères
 
-Ecrire une fonction C++ qui prend en paramètre une chaîne de caractères str (de type string) et qui retourne une chaîne de caractères (de type string) contenant :
+Écrire une fonction C++ qui prend en paramètre une chaîne de caractères str (de type string) et qui retourne une chaîne de caractères (de type string) contenant :
 - le caractère médian de str, si str comporte un nombre impair de caractères
 - les 2 caractères médians de str, si str comporte un nombre pair de caractères
   
@@ -13,7 +13,6 @@ Exemples
 
 ~~~cpp
 #include <iostream>
-#include <string_view>
 using namespace std;
 
 string milieu(const string & str) {
@@ -24,7 +23,7 @@ string milieu(const string & str) {
 }
 
 /* Solution plus verbeuse
-string milieu(string_view str) {
+string milieu(const string & str) {
     const size_t str_taille = str.length();
 
     if (str_taille == 0) return "";
@@ -44,8 +43,6 @@ int main() {
     string str; cin >> str;
 
     cout << "\"" << str << "\" - Milieu = \"" << milieu(str) << "\"\n";
-
-    return 0;
 }
 
 ~~~
