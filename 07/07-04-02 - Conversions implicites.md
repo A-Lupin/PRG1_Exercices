@@ -13,8 +13,8 @@ double d = 1;
 cout << setprecision(10) << boolalpha;
 
 // Notes : on suppose les char codés sur 8 bits et les int en complément à 2 sur 32 bits
-// $2^8 = 256$
-// $2^32 = 4294967296$
+// 2^8 = 256
+// 2^32 = 4294967296
 ~~~
 
 Qu'affichent les lignes suivantes ? Justifier les réponses
