@@ -1,6 +1,6 @@
 # Littéraux constants
 
-Pour chacune des lignes de code suivantes, indiquez 
+Pour chacune des lignes de code suivantes, indiquer 
 - si elle compile
 - si oui
   - quel est le type de la variable
