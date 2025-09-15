@@ -1,6 +1,6 @@
 # Types numériques (théorie)
 
-1. Dressez la liste exhaustive de tous les types entiers signés supportés par C++ 
+1. Dresser la liste exhaustive de tous les types entiers signés supportés par C++ 
 
 <details>
 <summary>Solution</summary>
