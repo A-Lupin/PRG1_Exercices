@@ -116,10 +116,11 @@ struct Struct {
 | 5  | correct   | type *anonyme* et une variable `date`est créée               |
 | 6  | correct   | un `struct` peut être vide                                   |
 | 7  | correct   | `ptr`est initialisé ce qui est une bonne chose               |
-| 8  | correct   | un `struc` peut contenir un `string`                         |
-| 9  | correct   | un `struc` peut contenir un autre `struct`                   |
+| 8  | correct   | un `struct` peut contenir un `string`                         |
+| 9  | correct   | un `struct` peut contenir un autre `struct`                   |
 | 10 | faux      | un `struc` n'est pas constant globalement                    |
-| 11 | correct   | un membre d'un `struc` peut être constant                    |
+| 11 | correct   | un membre d'un `struct` peut être constant                    |
 | 12 | correct   | mais une variable de ce type doit initialiser la constante c |
 
 </details>
+
