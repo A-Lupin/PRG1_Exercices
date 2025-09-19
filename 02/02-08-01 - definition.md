@@ -118,9 +118,10 @@ struct Struct {
 | 7  | correct   | `ptr`est initialisé ce qui est une bonne chose               |
 | 8  | correct   | un `struct` peut contenir un `string`                         |
 | 9  | correct   | un `struct` peut contenir un autre `struct`                   |
-| 10 | faux      | un `struc` n'est pas constant globalement                    |
+| 10 | faux      | un `struct` n'est pas constant globalement                    |
 | 11 | correct   | un membre d'un `struct` peut être constant                    |
 | 12 | correct   | mais une variable de ce type doit initialiser la constante c |
 
 </details>
+
 
