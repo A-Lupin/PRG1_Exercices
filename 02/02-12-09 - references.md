@@ -36,7 +36,7 @@ Pas possible, une référence est toujours initialisée
 <details>
 <summary>Réponse</summary>
 
-`var1 = 2;`
+`var1 = 2;` ou bien `ref1 = 2;` puisque `ref1` et `var1` sont synonymes
 
 </details>
 
@@ -45,7 +45,7 @@ Pas possible, une référence est toujours initialisée
 <details>
 <summary>Réponse</summary>
 
-`ref1 = 3;`
+`ref1 = 3;` ou bien `var1 = 3;`
 
 </details>
 
@@ -63,7 +63,7 @@ Pas possible, une référence est toujours initialisée
 <details>
 <summary>Réponse</summary>
 
-`cout << ref1; // => 3` // au contraire des pointeurs, aucune syntaxe particulière
+`cout << ref1; // => 3` 
 
 </details>
 
@@ -72,7 +72,8 @@ Pas possible, une référence est toujours initialisée
 <details>
 <summary>Réponse</summary>
 
-`int* const ref1 = &var1;`
+`int* const ref1b = &var1;` La correspondance n'est toutefois pas exacte car pour modifier la valeur 
+de `var1` en passant par `ref1b` il faut écrire avec cette déclaration `*ref1b = ...` (ce qui est possible) et non simplement `ref1 = ...` comme avec la déclaration 2). `const` qualifie en principe ce qui vient juste avant (ici *, donc le pointeur et non l'entier vers lequel il pointe).
 
 </details>
 
@@ -81,7 +82,23 @@ Pas possible, une référence est toujours initialisée
 <details>
 <summary>Réponse</summary>
 
-`const int* const refCste = &var1;`
+`const int* const refCste = &var1;` La correspondance n'est toutefois pas exacte, car pour accéder à la valeur vers laquelle `refCste` pointe, on doit écrire `*refCste`; voir le programme suivant qui compile:
+
+~~~cpp
+
+int main() {
+  int var1;
+  int &ref1 = var1;
+  var1 = 2;
+  ref1 = 3;
+  int * const ref1b = &var1;
+  *ref1b = 4; // Modifie la valeur de var1 à 4
+  int const * const refCste = &var1;
+  var1 = 2**refCste; // Modifie la valeur de var1 à 8;         
+                     // Le premier * est la multiplication, le second le déréférencement
+}
+
+~~~
 
 </details>
 
