@@ -11,9 +11,9 @@
 
 n%2
 
-1-n%2
+1-n%2 // Une autre solution serait (n+1)%2
 
-(n+2)%3%2
+(n+1)%3%2
 
 ~~~
 
