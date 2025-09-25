@@ -61,7 +61,7 @@ bool operator>(const Fraction & gauche, const Fraction & droit) {
   return droit < gauche;
 }
 bool operator<=(const Fraction & gauche, const Fraction & droit) {
-  return not (gauche > droit); 
+  return not (droit < gauche); 
 }
 */
 
