@@ -1,4 +1,4 @@
-# if ... else -> ?:
+# if ... else ➙ ? :
 
 Réécrire les extraits de code suivants en une seule ligne en utilisant un ou des opérateurs ternaires 
 
