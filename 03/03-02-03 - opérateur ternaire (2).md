@@ -1,6 +1,6 @@
 # ? : ➙ if ... else
 
-Réécrire les extraits de code suivants en n'utilisant pas d'opérateur ternaire mais uniquement `if ... else`
+Réécrire les extraits de code suivants en n'utilisant pas d'opérateur ternaire mais uniquement avec `if ... else`
 
 ~~~cpp 
 a = a >= 1 ? 42 : a * a; 
