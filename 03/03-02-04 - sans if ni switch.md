@@ -34,7 +34,7 @@ if (j == 0) {
 <summary>Solution</summary>
 
 ~~~cpp
-b = (j == 0) or (i / j >= k);
+b = (j == 0) or (i / j >= k); // Équivalent à b = j == 0 or not (i/j < k)
 ~~~
 
 </details>
@@ -55,7 +55,7 @@ if (j == 0) {
 <summary>Solution</summary>
 
 ~~~cpp
-b = (j != 0) and (i / j < k);
+b = (j != 0) and (i / j < k); // Équivalent à b = j and i/j < k;
 ~~~
 
 </details>
