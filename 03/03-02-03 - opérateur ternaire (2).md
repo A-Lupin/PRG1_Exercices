@@ -1,4 +1,4 @@
-# ?: -> if ... else
+# ? : ➙ if ... else
 
 Réécrire les extraits de code suivants en n'utilisant pas d'opérateur ternaire mais uniquement `if ... else`
 
