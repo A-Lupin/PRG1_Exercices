@@ -1,6 +1,6 @@
 # Note ECTS
 
-L'université de Genève utilise le barème suivant pour convertir ses notes au quart de point entre 0 et 6 en notes ECTS entre F et A.
+L'Université de Genève utilise le barème suivant pour convertir ses notes au quart de point entre 0 et 6 en notes ECTS entre F et A.
 
 | Note UNIGE  | Note ECTS |
 |-------------|---- |
@@ -16,7 +16,7 @@ L'université de Genève utilise le barème suivant pour convertir ses notes au 
 - si l'utilisateur entre une note en dehors de la plage 0-6, il faut signaler une erreur.
 - si l'utilisateur entre une note qui n'est pas arrondie au quart de point, on la considère comme la note arrondie au quart de point inférieur. Par exemple, si l'utilisateur entre la note 4.60, on indique une note ECTS de C.
 
-Eviter absolument de dupliquer les tests. 
+Éviter absolument de dupliquer les tests. 
 
 Exemples d'exécution : 
 
