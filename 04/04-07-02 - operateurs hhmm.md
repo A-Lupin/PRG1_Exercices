@@ -164,7 +164,6 @@ istream& operator>> (istream& is, HeureMinute& h) {
    else
       h.minute = int8_t(valeur);
 
-
    return is;
 }
 
@@ -228,3 +227,4 @@ struct HeureMinute {
 On a alors les 6 opérateurs de comparaisons définis!
 
 </details>
+
