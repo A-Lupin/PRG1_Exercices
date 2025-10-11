@@ -12,13 +12,14 @@ struct Fraction{int num, den;};
 
 ~~~cpp
 
+using namespace std;
 int main() {
-  Fraction a{1,2}, b{2,4}, c{-4,12}, d{-5,-10}, e{3,-9};
-  cout  << (a < b) << (a <= b) << (c > a) << (c >= e) 
+  Fraction a{1,2}, b{2,4}, c{4,-12}, d{-5,-10}, e{3,-9};
+  cout  << (a < b) << (b <= c) << (c > a) << (c >= e) 
         << (a == b) << (a != d) 
         << endl;
 }
-// Affiche 010110
+// Affiche 000110
 
 ~~~
 
@@ -33,7 +34,8 @@ int main() {
 struct Fraction{int num, den;};
 
 int operator<=>(const Fraction & gauche, const Fraction & droit) {
-  return gauche.num * droit.den - droit.num * gauche.den;
+  return (gauche.den * droit.den > 0 ? 1 : -1) *
+         (gauche.num * droit.den - droit.num * gauche.den) ;
 }
 
 bool operator==(const Fraction & gauche, const Fraction & droit) {
@@ -67,12 +69,11 @@ bool operator<=(const Fraction & gauche, const Fraction & droit) {
 
 using namespace std;
 int main() {
-  Fraction a{1,2}, b{2,4}, c{-4,12}, d{-5,-10}, e{3,-9};
-  cout  << (a < b) << (a <= b) << (c > a) << (c >= e) 
+  Fraction a{1,2}, b{2,4}, c{4,-12}, d{-5,-10}, e{3,-9};
+  cout  << (a < b) << (b <= c) << (c > a) << (c >= e) 
         << (a == b) << (a != d) 
         << endl;
 }
-// Affiche 010110
-
+// Affiche 000110
 ~~~
 
