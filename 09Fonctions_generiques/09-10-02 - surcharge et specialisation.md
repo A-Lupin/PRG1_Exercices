@@ -26,7 +26,7 @@ using namespace std;
 
 const char* bool_en_francais [] = { "faux", "vrai" };
 
-// À COMPLETER ICI
+// À COMPLÉTER ICI
 
 int main() {
 

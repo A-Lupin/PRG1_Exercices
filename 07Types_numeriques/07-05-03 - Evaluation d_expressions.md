@@ -1,4 +1,4 @@
-# Evaluation d'expressions
+# Évaluation d'expressions
 
 Que va afficher le programme ci-dessous ? Expliquer les résultats obtenus.
 
