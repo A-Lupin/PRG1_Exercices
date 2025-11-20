@@ -43,7 +43,7 @@ Le vecteur ayant grandi (passé de 4 à 5 éléments), la **capacité a été aj
 [1241299832, 6, -122426314] // indéterminé
 ~~~
 
-**Ecrire le code nécessaire pour démontrer le problème.**
+**Écrire le code nécessaire pour démontrer le problème.**
 
 <details>
 <summary>Solution</summary>

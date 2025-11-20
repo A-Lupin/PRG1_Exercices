@@ -1,6 +1,6 @@
 # Algorithm - sans modification
 
-Soit le tableau et le vecteur ainsi déclarés.
+Soient le tableau et le vecteur ainsi déclarés.
 
 ~~~cpp
 array  a {1, 2, 3};

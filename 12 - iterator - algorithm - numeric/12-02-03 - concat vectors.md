@@ -1,6 +1,6 @@
 # Concaténation de deux vecteurs
 
-Sans utiliser `<algorithm>`, écrire une fonction générique *concat_tab* qui prend en paramètres 4 itérateurs identifiant 2 deux plages de données de type `<T>` et qui retourne un `vector<T>` avec l'ensemble de ces données.
+Sans utiliser `<algorithm>`, écrire une fonction générique *concat_tab* qui prend en paramètres 4 itérateurs identifiant 2 deux plages de données convertibles vers le type `<T>` et qui retourne un `vector<T>` avec l'ensemble de ces données.
 
 Aucun ordre particulier n'est demandé.
 
