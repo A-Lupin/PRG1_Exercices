@@ -15,8 +15,10 @@ int main() {
 ~~~
 
 <details>
+
 <summary>Solution 1</summary>
 Spécialisation de la classe entière
+
 ~~~cpp
 using namespace std;
 template<typename T, size_t n>
@@ -30,6 +32,7 @@ class Coord{
   bool operator==(const Coord &) const = default;
   void afficher() const { for(const T & e : coord) cout << e << ' '; cout << endl;};
 };
+
 
 // Spécialisation pour n = 2; on doit tout récrire  
 template<typename T>
@@ -47,9 +50,13 @@ class Coord<T, 2> {
 };
 ~~~
 
-</details><details>
+</details>
+
+<details>
+
 <summary>Solution 2</summary>
 Vérification à la compilation que rho et phi ne peuvent être appelés qu'en dimension 2
+
 ~~~cpp
 using namespace std;
 template<typename T, size_t n>
