@@ -10,8 +10,6 @@ concept Arithmetique = std::is_arithmetic<T>::value;
 
 Adapter la classe `Coord` à l'aide du concept `Arithmetique` de sorte que l'on ne puisse plus la compiler avec des types qui ne sont pas des types entiers ou flottants. 
 
-~~~
-
 <details>
 <summary>Solution</summary>
 
