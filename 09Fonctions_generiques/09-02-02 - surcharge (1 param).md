@@ -23,7 +23,7 @@ f('a');
 <summary>Solution</summary>
 
 - `Fonction no 3` (ajustement de type)
-À noter que 'g++' considère 'signed char' et 'unsigned char' comme des types différents de 'char'
+À noter que `g++` considère `signed char` et `unsigned char` comme des types différents de `char`
 
 NB : la no 2 n'est pas possible (`int&` sur une constante `'a'`)
 
@@ -162,10 +162,10 @@ f('2') ? f(2.0) : f(-2.0);
 <details>
 <summary>Solution</summary>
 
-Comme vu précédemment, `f('2')` appelle la fonction no 1 ou la fonction no 3 (sur une machine avec `unsigned char`).<br>
-Ces deux fonctions retournant `false`, `f(-2.0)` est appelé ce qui correspond à la Fonction no 5
+Comme vu précédemment, `f('2')` fonction no 3 .<br>
+Cette fonction retournant `false`, `f(-2.0)` est appelé ce qui correspond à la Fonction no 5
 
-- `Fonction no 1` et `Fonction no 5` ou `Fonction no 3` et `Fonction no 5`
+- `Fonction no 3` et `Fonction no 5`
 
 ----------------------------------------
 
