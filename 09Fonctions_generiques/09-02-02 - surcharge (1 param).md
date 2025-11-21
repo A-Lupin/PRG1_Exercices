@@ -22,8 +22,8 @@ f('a');
 <details>
 <summary>Solution</summary>
 
-- `Fonction no 1` sur une machine avec `signed char    (type exact)
-- `Fonction no 3` sur une machine avec `unsigned char` (ajustement de type)
+- `Fonction no 3` (ajustement de type)
+À noter que 'g++' considère 'signed char' et 'unsigned char' comme des types différents de 'char'
 
 NB : la no 2 n'est pas possible (`int&` sur une constante `'a'`)
 
