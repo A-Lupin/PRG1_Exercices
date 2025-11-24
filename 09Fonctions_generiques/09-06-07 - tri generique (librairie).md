@@ -84,8 +84,6 @@ void tri(T & t, size_t n);
 <details>
 <summary>Solution - Tri.tpp</summary>
 
-<summary>Solution - Tri.tpp</summary>
-
 ~~~cpp
 #include <utility>  // std::swap
 // À noter: ne pas mettre using namespace std;
