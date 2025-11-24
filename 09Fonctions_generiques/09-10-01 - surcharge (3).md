@@ -1,7 +1,7 @@
 # Surcharges avec fonctions ordinaires
 
 Que produisent les appels aux fonctions ci-dessous ?
-Indiquer les cas d'ambigüité.
+Indiquer les cas d'ambiguïté.
 
 ~~~cpp
 template <typename T, typename U> int fct(T,       U)      { .. } // 1
@@ -422,7 +422,7 @@ fct<>(i, i);
    - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
    - $P_{2} = \left\\{1, 3, 4\right\\}$ par type exact
 3. $P_{1} \cap P_{2} = \left\\{1, 3, 4\right\\}$
-4. **Ambigüité** entre 3 et 4, qui ne sont pas plus spécialisées l'une que l'autre
+4. **Ambiguïté** entre 3 et 4, qui ne sont pas plus spécialisées l'une que l'autre
 --------------------
 
 </details>

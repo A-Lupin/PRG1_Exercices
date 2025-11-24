@@ -1,7 +1,7 @@
 # Fonctions surchargées (1 paramètre)
 
 Que produisent les appels aux fonctions ci-dessous ?<br>
-Indiquer les cas d'ambigüité.
+Indiquer les cas d'ambiguïté.
 
 ~~~cpp
 double      f(signed char) { cout << "Fonction no 1"; return 0.; }
@@ -23,7 +23,7 @@ f('a');
 <summary>Solution</summary>
 
 - `Fonction no 3` (ajustement de type)
-À noter que `g++` considère `signed char` et `unsigned char` comme des types différents de `char`
+`signed char` et `unsigned char` sont des types différents de `char`, même s'ils ont la même représentation interne.
 
 NB : la no 2 n'est pas possible (`int&` sur une constante `'a'`)
 
@@ -89,7 +89,7 @@ f(2ull);
 
 `2ull` est un `unsigned long long`
 
-4 fonctions sont candidates et il n'y a pas de priorité de choix → **ambiguité**
+4 fonctions sont candidates et il n'y a pas de priorité de choix → **ambiguïté**
 
 - Fonction no 1 (conversion de `unsigned long long` en `signed char`
 - Fonction no 3 (conversion de `unsigned long long` en `const int&`

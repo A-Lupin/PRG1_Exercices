@@ -13,7 +13,7 @@ double t[ ] = {6.1, 2.2, 8.3, 7.4, 1.5, 3.6};
 Trier ces tableaux en utilisant le tri par *sélection*.<br>
 Les tableaux seront affichés avant et après le tri par le programme principal.
 
-**Les sous-programmes utiles au tri seront placés dans un fichier séparé 'tri.tpp'**.
+**La procédure de tri sera placée dans un fichier séparé 'tri.hpp' et les implémentations des procédures utiles seront placés dans un autre fichier séparé 'tri.tpp'**.
 
 ~~~
 [6, 2, 8, 7, 1, 3]
@@ -33,7 +33,7 @@ Les tableaux seront affichés avant et après le tri par le programme principal.
 #include <iostream>
 #include <vector>
 #include <array>
-#include "tri.tpp"
+#include "tri.hpp"
 
 using namespace std;
 
@@ -66,14 +66,26 @@ int main() {
 
 
 <details>
+<summary>Solution - Tri.hpp</summary>
+
+~~~cpp
+#ifndef TRI_HPP
+#define TRI_HPP
+
+template <typename T>
+void tri(T & t, size_t n);
+
+#include "tri.tpp"
+
+#endif
+}~~~
+
 <summary>Solution - Tri.tpp</summary>
 
 ~~~cpp
-#ifndef TRI_TPP
-#define TRI_TPP
-
 #include <utility>  // std::swap
 // À noter: ne pas mettre using namespace std;
+// Pas besoin de protection d'inclusion multiple, n'est inclu que dans le .tpp
 
 template <typename T>
 size_t indice_min(const T & t, size_t debut, size_t fin) {
@@ -91,8 +103,6 @@ void tri(T & t, size_t n) {
       std::swap(t[i], t[i_min]);
    }
 }
-
-#endif
 ~~~
 
 </details>

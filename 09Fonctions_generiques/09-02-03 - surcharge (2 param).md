@@ -1,7 +1,7 @@
 # Fonctions surchargées (2 paramètres)
 
 Que produisent les appels aux fonctions ci-dessous ?<br>
-Indiquer les cas d'ambigüité.
+Indiquer les cas d'ambiguïté.
 
 ~~~cpp
 void fct (      int,          float)  {cout << "Fonction no 1" << endl;}
@@ -26,7 +26,7 @@ const double& rdC = d;
 	3. sinon par promotion numérique
 	4. sinon par conversion de type 
 3. Faire l'intersection des ensembles sélectionnés par chaque paramètre
-4. Si cet ensemble compte une seule fonction, elle est appelée. S'il en compte plusieurs ou aucune, il y a ambiguité
+4. Si cet ensemble compte une seule fonction, elle est appelée. S'il en compte plusieurs ou aucune, il y a ambiguïté
 
 <br>
 
@@ -50,7 +50,7 @@ fct(i, c);
      - 4 par promotion numérique
      - 1, 2 par conversion de type. 
 3. $P_{1} \cap P_{2} = \emptyset$ 
-4. **ambigüité**
+4. **ambiguïté**
 
 </details>
 
@@ -115,7 +115,7 @@ fct(ri, f);
 	- Pour 3, pas de conversion de `int&` vers `float&` ni de `float` vers `int&`.
 2. Paramètres
 	- $P_{1} = \left\\{1, 2\right\\}$
-		- `i` de type `int&`
+		- `ri` référence à un objet de de type `int`
 		- 1 et 2 par type exact et copie par valeur
 		- 4 par conversion `int` vers `float`.
 	- $P_{2} = \left\\{1\right\\}$
@@ -141,7 +141,7 @@ fct(f, 1);
 	- Pour 3, pas de conversion de `const int` vers `int&`.
 2. Paramètres
 	- $P_{1} = \left\\{4\right\\}$
-		- `i` de type `float&`
+		- `f` de type `float&`
 		- 4 par conversion simple `float&` vers `const float&`.
 		- 1 et 2 par conversion de type `float` vers `int` 
 	- $P_{2} = \left\\{4\right\\}$
@@ -218,7 +218,7 @@ fct(2, c);
 	- $P_{1} = \left\\{1, 2\right\\}$ par type exact
 	- $P_{2} = \left\\{4\right\\}$ par promotion numérique
 3. $P_{1} \cap P_{2} = \emptyset$
-4. **ambigüité**
+4. **ambiguïté**
 
 </details>
 
@@ -235,7 +235,7 @@ fct(c, 2);
 	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique
 	- $P_{2} = \left\\{4\right\\}$ par type exact
 3. $P_{1} \cap P_{2} = \emptyset$
-4. **ambigüité**
+4. **ambiguïté**
 
 </details>
 
@@ -264,12 +264,12 @@ fct(f, rdC);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$, 3 sans conversion de `const double&` vers `int&`
+1. $S = \left\\{1, 2, 4\right\\}$, 3 pas de conversion de `const double&` vers `int&`
 2. Paramètres
 	- $P_{1} = \left\\{4\right\\}$ par conversion simple `float` vers `const float`
 	- $P_{2} = \left\\{2\right\\}$ par type exact 
 3. $P_{1} \cap P_{2} = \emptyset$
-4. **ambigüité**
+4. **ambiguïté**
 
 </details>
 
@@ -320,7 +320,7 @@ fct('a', 2L);
 	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique
 	- $P_{2} = \left\\{1, 2, 4\right\\}$ par conversion 
 3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
-4.  **ambigüité**
+4.  **ambiguïté**
 
 </details>
 
@@ -337,6 +337,6 @@ fct('a', 2.0L);
 	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique `char` -> `int`
 	- $P_{2} = \left\\{1, 2, 4\right\\}$ par conversion `long double` vers ...
 3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
-4.  **ambigüité**
+4.  **ambiguïté**
 
 </details>
