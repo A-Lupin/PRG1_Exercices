@@ -79,6 +79,10 @@ void tri(T & t, size_t n);
 
 #endif
 }~~~
+</details>
+
+<details>
+<summary>Solution - Tri.tpp</summary>
 
 <summary>Solution - Tri.tpp</summary>
 
