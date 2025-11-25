@@ -1,5 +1,26 @@
 # Fonctions surchargées (1 paramètre)
 
+Conversions lors de surdéfinition de fonctions:
+~~~cpp
+T t();          // Déclaration d'une variable t de type T
+const T c = t;  // Constante de type T
+T* p = &t;      // Pointeur vers un T
+T tab[5];       // Tableau natif de T
+
+f(T) :         exact pour t et c
+f(T &) :       exact et utilisable uniquement pour t
+f(const T) :   exact pour t et c; redéfinition de f(T)
+f(const T &) : exact c, simple pour t; inutilisable si f(T) définie, même pour T
+
+f(T*) :        exact et utilisable uniquement pour p ou tab
+f(T[]) :       redéfinition de f(T*)
+                                             
+f(u) : promotion si u de type bool, char, unsigned char, ..., unsigned short et T = int
+f(u) : promotion si u de type float et T = double
+
+f(u) : conversion si u d'un type différent de T et qu'on peut écrire T t = u;
+~~~
+
 Que produisent les appels aux fonctions ci-dessous ?<br>
 Indiquer les cas d'ambiguïté.
 
