@@ -78,7 +78,8 @@ void tri(T & t, size_t n);
 #include "tri.tpp"
 
 #endif
-}~~~
+~~~
+
 </details>
 
 <details>
