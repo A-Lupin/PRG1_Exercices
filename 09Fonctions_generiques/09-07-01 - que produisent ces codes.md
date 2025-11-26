@@ -1,63 +1,65 @@
-# Que produisent ces codes
+# Auto et généricité
+
+Que produit le code suivant. S'il y a une ligne fautive, la supprimer au préalable.
 
 
 ~~~cpp
-// no 1
-template
-T somme(T a, T b) {
-    return (a + b);
+#include<iostream>
+using namespace std;
+
+auto minimum(auto a, auto b) {
+  static int v;
+  cout << v++ << ' ' << &a << ' ' << &v << endl;
+  return a < b ? a : b;
 }
 
 int main() {
-   int   a = 1;
-   float b = 2.5f;
-   cout << somme(a, a) << " / " << somme(b, b) ;
+  auto texte = "Bonjour", txt = "Madame";
+  string s1 = "bonjour", s2 = "monsieur";
+  
+  cout << minimum(texte, txt) << endl;
+  cout << minimum(texte, s1) << endl;
+  cout << minimum(s1, s2) << endl;
+  cout << minimum(s1, txt) << endl;
+  cout << minimum(texte, txt) << endl;
+  cout << minimum(texte, s1).size() << endl;
+//  cout << minimum(texte, txt).size() << endl;
 }
 ~~~
 
 <details>
 <summary>Solution</summary>
 
-Erreur de compilation, le `template` est incomplet.
-
 ------------------------------------------------
 </details>
 
-~~~cpp
-// no 2
-template <typename T>
-T somme(T a, T b) {
-   return (a + b);
-}
-
-int main() {
-   int   a = 1;
-   float b = 2.5f;
-   cout << somme(a, b) << " / " << somme(a, b);
-}
-~~~
-
-<details>
-<summary>Solution</summary>
-
-Erreur de compilation, la déduction de type n'est pas possible, les types sont différents.
-
-------------------------------------------------
-</details>
+La dernière ligne est incorrecte, car le type de retour est `const char *` qui n'a pas de méthode `size()`.
 
 ~~~cpp
-// no 3
-template <typename T>
-T somme(T a, T b) {
-   return (a + b);
-}
-
-int main() {
-   int   a = 1;
-   float b = 2.5f;
-   cout << somme<int>(a, b) << " / " << somme<float>(a, b);
-}
+0
+Madame
+0
+Bonjour
+0
+bonjour
+0
+Madame
+1
+Madame
+1
+7
 ~~~
+
+Il y a donc 4 fonctions crées par le compilateur:
+
+~~~cpp
+const char* minimum(const char *, const char *);
+string minimum(const char *, string);
+string minimum(string, const char *);
+string minimum(string, string);
+~~~
+
+À noter que l'opérateur `<` est défini pour les adresses et que le compilateur a placé `txt` à une 
 
 <details>
 <summary>Solution</summary>
