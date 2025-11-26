@@ -33,7 +33,6 @@ int main() {
 <summary>Solution</summary>
 
 ------------------------------------------------
-</details>
 
 La dernière ligne est incorrecte, car le type de retour est `const char *`, qui n'a pas de méthode `size()`.
 
