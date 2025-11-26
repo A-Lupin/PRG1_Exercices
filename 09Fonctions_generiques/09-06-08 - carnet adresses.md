@@ -12,7 +12,7 @@ Soit la déclaration et l'instruction
                 Personne{"Armand"s,  "Cuche"s,  Date{21, 12, 2018}},
                 Personne{"Jean"s,    "Baume"s,  Date{ 2,  4, 1646}},
                 Personne{"Jean"s,    "Gette"s,  Date{23,  3, 1587}},
-                Personne{"Pierre"s,  "Carré"s,  Date{17,  5, 1957}}};
+                Personne{"Pierre"s,  "Carré"s,  Date{31,  4, 1593}}};
 
   cout << carnet << livre << endl;
 ~~~

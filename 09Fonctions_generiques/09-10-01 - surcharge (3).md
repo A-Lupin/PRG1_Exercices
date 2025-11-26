@@ -34,7 +34,7 @@ double* pd = &d;     // ptr sur d
 	1. s'il est vide, il y a ambigüité
 	2. s'il a 1 élément, cette fonction est appelée
 5. S'il reste plusieurs fonctions
-	1. si une est plus spécialisée que toutes les autres, elle est appelée
+	1. si une est plus spécialisée que toutes les autres (chaque appel peut correspondre à une instanciation de l'autre, mais pas l'inverse), elle est appelée
 	2. sinon, il y a ambigüité
 	
 <br>
@@ -198,6 +198,7 @@ fct(i, i);
 <details>
 <summary>Solution</summary>
 Cas simplifié: il existe une fonction ordinaire avec exactement les bons types pour tous les paramètres (n°5); c'est elle qui est appelée.
+
 --------------------
 
 </details>

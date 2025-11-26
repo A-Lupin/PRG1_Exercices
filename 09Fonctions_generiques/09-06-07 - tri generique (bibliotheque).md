@@ -88,7 +88,8 @@ void tri(T & t, size_t n);
 ~~~cpp
 #include <utility>  // std::swap
 // À noter: ne pas mettre using namespace std;
-// Pas besoin de protection d'inclusion multiple, n'est inclu que dans le .tpp
+// Pas besoin de protection d'inclusion multiple, n'est inclu que dans le .hpp
+// qui est protégé
 
 template <typename T>
 size_t indice_min(const T & t, size_t debut, size_t fin) {

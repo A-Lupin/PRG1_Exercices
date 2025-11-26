@@ -26,6 +26,8 @@ cout << m;
 <details>
 <summary>Solution</summary>
 
+Il n'y a qu'un opérateur générique à définir, qui sera instancié deux fois, pour:
+`T = int` et `T = vector<int>`
 ~~~cpp
 template <typename T>
 ostream& operator<< (ostream& os, const vector<T>& v) {
@@ -55,6 +57,7 @@ Même question mais cette fois au format.
 <details>
 <summary>Solution</summary>
 
+Il faut ajouter une surcharge spécifique pour les `vector<vector<T>>`
 ~~~cpp
 template <typename T>
 ostream& operator<< (ostream& os, const vector<T>& v) {
