@@ -1,6 +1,6 @@
 # Fonctions surchargées
 
-Les fonctions proposées peuvent-elles être surcharges et utilisées correctement ?
+Les fonctions proposées peuvent-elles être surchargées et utilisées correctement ?
 
 <br>
 
@@ -93,7 +93,7 @@ int i;
 
 f(cste); // appel de la no 2
 f(2);    // appel de la no 2
-f(i);    // ambiguité
+f(i);    // ambiguïté
 ~~~
 
 -------------------------------------
@@ -116,10 +116,10 @@ const int cste = 2;
 int i;
 const int& r = i;
 
-f(cste); // ambiguité
-f(2);    // ambiguité
-f(i);    // ambiguité
-f(r);    // ambiguité
+f(cste); // ambiguïté
+f(2);    // ambiguïté
+f(i);    // ambiguïté
+f(r);    // ambiguïté
 ~~~
 
 -------------------------------------

@@ -13,7 +13,7 @@ Reprise de l'exercice [04-05-02 - permutation](./04-05-02%20-%20permutation.md)
 using namespace std;
 
 template<typename T>
-void permutationCirculaireDroite(T& x,
+void permutation_circulaire_droite(T& x,
                                  T& y,
                                  T& z);
 
@@ -28,14 +28,14 @@ void afficher(const T& x,
 int main() {
    double x = 1, y = 2, z = 3;
    for (int i = 1; i <= 3; ++i) {
-      permutationCirculaireDroite(x, y, z);
+      permutation_circulaire_droite(x, y, z);
       afficher(x, y, z);
    }
 }
 
 //------------------------------------------------------------
 template<typename T>
-void permutationCirculaireDroite(T& x,
+void permutation_circulaire_droite(T& x,
                                  T& y,
                                  T& z) {
    T tmp = z;

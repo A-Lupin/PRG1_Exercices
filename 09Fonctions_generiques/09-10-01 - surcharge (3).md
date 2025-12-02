@@ -25,17 +25,20 @@ double* pd = &d;     // ptr sur d
 
 2. Déduire les arguments génériques pour toutes les fonctions génériques, et établir la liste des fonctions appelables, y compris par conversion pour les paramètres non génériques
 	1. si elle est vide, il y a erreur de compilation
+	
 3. Parmi ces fonctions appelables, pour chacun des paramètres, établir celles qui sont appelables le plus simplement, i.e. 
 	1. par type exact
 	2. sinon par conversion simple (ajout d'un `const`) 
 	3. sinon par promotion numérique
 	4. sinon par conversion de type 
+	
 4. Faire l'intersection des ensembles sélectionnés par chaque paramètre
-	1. s'il est vide, il y a ambigüité
+	1. s'il est vide, il y a ambiguïté
 	2. s'il a 1 élément, cette fonction est appelée
+	
 5. S'il reste plusieurs fonctions
 	1. si une est plus spécialisée que toutes les autres (chaque appel peut correspondre à une instanciation de l'autre, mais pas l'inverse), elle est appelée
-	2. sinon, il y a ambigüité
+	2. sinon, il y a ambiguïté
 	
 <br>
 

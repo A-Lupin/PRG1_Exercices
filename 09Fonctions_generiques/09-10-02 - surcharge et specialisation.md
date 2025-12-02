@@ -113,7 +113,7 @@ template<> bool opposer(bool a);
 
 On écrit une version générique qui affiche des `array<T,n>` 
 et on la **surcharge** pour les 2 cas particulier `array<bool,n>`
-et `array<T,0>`. Comme cela crée une ambiguité pour l'appel 
+et `array<T,0>`. Comme cela crée une ambiguïté pour l'appel 
 avec `array<bool,0>`, on ajoute une surcharge supplémentaire
 pour ce cas particulier avec une fonction non générique.
 
@@ -142,7 +142,7 @@ ostream& operator<<(ostream& os, array<T,0>) {
    return os;
 }
 
-ostream& operator<<(ostream& os, array<bool,0> const& a) {  // lève l'ambiguité
+ostream& operator<<(ostream& os, array<bool,0> const& a) {  // lève l'ambiguïté
    return operator<< <bool>(os,a);
 }
 ~~~
