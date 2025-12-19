@@ -3,34 +3,40 @@
 Écrire une classe `Coord` qui stocke des coordonnées sous la forme d'un tableau natif et qui permet d'obtenir le résultat indiqué pour les instructions suivantes. Il faut prévoir une surcharge pour l'opérateur `<<`.
 
 ~~~cpp
+#include <iostream>        
 int main() {
   Coord<double,2> c;
   c[1] = 3.3;
-  cout << c.phi() << ' ' << c << endl; // Affiche 1.5708 (0, 3.3)
+  std::cout << c.phi() << ' ' << c << std::endl; // Affiche 1.5708 (0, 3.3)
   Coord<int, 66> d;
   d[3] = 5.5;
-  cout << d[3] << ' ' << d.size() << endl; // Affiche 5 66
+  std::cout << d[3] << ' ' << d.size() << std::endl; // Affiche 5 66
   Coord a(c);
-  cout << a.phi() << ' ' << a << endl; // Affiche 1.5708 (0, 3.3)
+  std::cout << a.phi() << ' ' << a << std::endl; // Affiche 1.5708 (0, 3.3)
   Coord<double, 4> b(d);
   b[1] = 1.1;
-  cout <<  b.size() << ' ' << b << endl; // Affiche 4 (0, 1.1, 0, 5)
-}
-~~~
+  std::cout <<  b.size() << ' ' << b << std::endl; // Affiche 4 (0, 1.1, 0, 5)
+}~~~
 
 <details>
 <summary>Solution</summary>
 
 ~~~cpp
+#include <cstdlib> // size_t
+#include <ostream>
+#include <cmath>
+
+/* Si on a besoin d'accéder à des données privées de Coord<T, n>, prévoir ceci
 template<typename T, size_t n> class Coord;
 template<typename T, size_t n> 
 std::ostream & operator << (std::ostream& os, const Coord<T, n>& rhs) {
   os << '(';
   for (size_t i = 0; i < rhs.size(); ++i) 
-    os << (i > 0? ", ": "") << rhs[i];
+    os << (i > 0? ", ": "") << rhs.data[i]; // si on tient absolument à imposer friend
   os << ')';
   return os;
 }
+*/
 
 template<typename T = int, size_t n = 2>
 class Coord{  
@@ -57,8 +63,18 @@ class Coord{
     return atan2(coord[1], coord[0]);
   }
 
-  friend std::ostream& operator<< <T>(std::ostream& os, const Coord<T, n>& rhs);
+//  friend std::ostream& operator<< <T>(std::ostream& os, const Coord<T, n>& rhs);
 };
+
+// Version qui n'accède à aucune donnée privée de Coord<T, n>
+template<typename T, size_t n> 
+std::ostream & operator << (std::ostream& os, const Coord<T, n>& rhs) {
+  os << '(';
+  for (size_t i = 0; i < rhs.size(); ++i) 
+    os << (i > 0? ", ": "") << rhs[i];
+  os << ')';
+  return os;
+}
             
 ~~~
 
