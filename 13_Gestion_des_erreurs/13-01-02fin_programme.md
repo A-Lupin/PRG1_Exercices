@@ -66,7 +66,7 @@ int main()
     default : j();
  }
 }
-
+~~~
 
 <details>
 <summary>la valeur 0</summary>
